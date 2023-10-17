@@ -1,0 +1,90 @@
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal width */
+  grid-gap: 10px; /* Adds a gap of 10 pixels between grid items */
+  background-color: blue;
+}
+
+img{
+  width:100%;
+}
+/*gallery-container is the grid container, defining the overall grid layout.
+Each <div class="grid-item"> represents a grid item, holding individual photos.*/
+
+
+/*ROW &  COLUMN*/
+.grid-container-1 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px; /* Three columns each 100px wide */
+  grid-template-rows: 50px 50px; /* Two rows each 50px high */
+  grid-gap: 10px; /* 10px gap between grid items */
+}
+
+.grid-item-1 {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+
+.grid-container2 {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 200px 1fr; /* 200px wide sidebar, rest of the space for main content */
+  grid-template-rows: 100px 1fr 1fr 100px; /* Fixed header and footer, rest for content */
+  height: 100vh; /* Full height of the viewport */
+}
+
+header {
+  grid-area: header; /* Place the header in the area named 'header' */
+  background-color: lightblue;
+}
+
+nav {
+  grid-area: nav;
+  background-color: lightgreen;
+}
+
+main {
+  grid-area: main;
+  background-color: lightyellow;
+}
+
+aside {
+  grid-area: aside;
+  background-color: lightcoral;
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightpink;
+}
+
+
+
+/*JUSTIFICATION AND ALIGNMENT*/
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px 50px;
+  grid-gap: 10px;
+  justify-items: center; /* Align items along the row axis to the center */
+  align-items: center; /* Align items along the column axis to the center */
+  justify-content: space-around; /* Distribute extra space between items along the row axis */
+  align-content: space-between; /* Distribute extra space between items along the column axis */
+}
+
+.item-3 {
+  background-color: lightblue;
+  text-align: center;
+  line-height: 50px;
+  width: 60px;
+}
